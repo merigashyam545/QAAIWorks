@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import { PageIntro } from "@/components/page-intro";
+export const metadata: Metadata={title:"Contact"};
+export default function ContactPage(){return <PageIntro eyebrow="Contact" title="Start a quality transformation conversation." intro="Planning your QA strategy for the AI era? Tell us what is changing in your organization and where quality is getting in the way."><div className="contact-panel"><div><h2>What we can explore</h2><p>Quality strategy, organizational friction, automation modernization, AI adoption, release confidence or an independent transformation assessment.</p><div className="contact-details"><a href="tel:+919980546951">+91 99805 46951</a><a href="mailto:hello@qaaiworks.com">hello@qaaiworks.com</a></div></div><div className="contact-actions"><a className="button" href="tel:+919980546951">Call Us ↗</a><a className="text-link" href="mailto:hello@qaaiworks.com">Email Us →</a></div></div></PageIntro>}

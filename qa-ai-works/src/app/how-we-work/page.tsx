@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import { PageIntro } from "@/components/page-intro";
+export const metadata: Metadata={title:"How We Work"};
+export default function HowPage(){return <PageIntro eyebrow="How We Work" title="Independent thinking. Practical transformation." intro="We meet organizations where they are, create a shared view of the problem and build a path from insight to sustained change."><div className="process-grid">{[["01","Assess","Understand strategy, effort, flow, capability and risk."],["02","Rethink","Challenge assumptions and design the target state."],["03","Enable","Build the patterns, skills and leadership alignment to move."],["04","Transform","Embed new ways of working and track meaningful progress."]].map(([n,t,b])=><article key={n}><span>{n}</span><h2>{t}</h2><p>{b}</p></article>)}</div></PageIntro>}
