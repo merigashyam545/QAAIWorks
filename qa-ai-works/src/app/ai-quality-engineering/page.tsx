@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import { PageIntro } from "@/components/page-intro";
-export const metadata: Metadata={title:"AI & Quality Engineering"};
+import { createPageMetadata } from "@/lib/metadata";
+export const metadata = createPageMetadata({ title: "AI & Quality Engineering", description: "Adopt AI in Quality Engineering with purpose across test design, automation, failure analysis, quality intelligence, risk identification and team capability.", path: "/ai-quality-engineering" });
 export default function AIPage(){return <PageIntro eyebrow="AI & Quality Engineering" title="Begin with the work—not the AI tool." intro="The strongest AI opportunities become visible when you understand where quality teams spend time, where intelligence matters and where repetitive effort can be reduced."><div className="content-split"><Image src="/quality-intelligence.png" width={1536} height={1024} alt="Quality engineers reviewing risk intelligence"/><div><h2>Find the effort. Find the friction. Apply AI with purpose.</h2><p>Test execution, automation creation, flaky-script maintenance, test data, failure analysis, reporting and coordination all consume capacity. The right question is not “Which AI tool should we buy?” It is “Which activities genuinely require human intelligence?”</p><p>We help you build that evidence, select responsible use cases and redesign the surrounding process, controls and skills so adoption delivers more than another tool in the stack.</p></div></div></PageIntro>}

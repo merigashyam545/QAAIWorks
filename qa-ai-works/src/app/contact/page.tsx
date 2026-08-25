@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import { PageIntro } from "@/components/page-intro";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = { title: "Contact" };
+export const metadata = createPageMetadata({ title: "Contact", description: "Talk to QA AI Works about Quality Engineering assessment, automation modernization, AI readiness, operating-model transformation and release confidence.", path: "/contact" });
 
 const questions = [
   { question: "Our QA organization has worked well for years. Do we really need to change it because of AI?", paragraphs: ["Maybe not everything needs to change. But everything deserves to be questioned.", "The QA practices that brought your organization this far still have value. Your people have built years of product knowledge, engineering experience and business understanding. AI should not make that irrelevant.", "The opportunity is to understand what should remain, what can evolve and where AI can remove effort that no longer needs to be human."], closing: "Transformation should protect what works while preparing the organization for what comes next." },
@@ -15,7 +15,18 @@ const questions = [
 ] as const;
 
 export default function ContactPage() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: questions.map(({ question, paragraphs, closing }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: [...paragraphs, closing].join(" ") },
+    })),
+  };
+
   return <PageIntro eyebrow="Contact" title="Bring us your QA challenge. Let’s start there." intro="You do not need a completed AI strategy, a shortlist of tools or all the answers. Start with the question your engineering organization is trying to solve.">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
     <section className="leader-questions" aria-labelledby="leader-questions-title">
       <div className="section-heading"><span className="eyebrow">A practical starting point</span><h2 id="leader-questions-title">Questions engineering leaders are asking</h2><p>Explore the questions we regularly help quality and engineering leaders work through.</p></div>
       <div className="question-list">{questions.map(({ question, paragraphs, closing }, index) => <details key={question}><summary><span>{String(index + 1).padStart(2, "0")}</span><strong>{question}</strong><i aria-hidden="true">+</i></summary><div className="question-answer">{paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}<strong>{closing}</strong></div></details>)}</div>

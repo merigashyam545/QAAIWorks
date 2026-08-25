@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { PageIntro } from "@/components/page-intro";
-export const metadata: Metadata = { title: "Services", description: "Quality Engineering assessment, transformation, automation modernization and AI adoption services." };
+import { createPageMetadata } from "@/lib/metadata";
+export const metadata = createPageMetadata({ title: "Services", description: "Explore Quality Engineering assessment, enterprise transformation, automation modernization, operating-model redesign, AI adoption and leadership workshops.", path: "/services" });
 const items=[
  ["01","Quality Engineering Assessment","An independent, evidence-led assessment of strategy, delivery flow, capability, cost drivers and quality risk. We identify what should stay, what should change and where transformation should begin."],
  ["02","Enterprise QE Transformation","A coherent enterprise strategy that connects quality ambition to product engineering, platforms, governance and measurable change."],
