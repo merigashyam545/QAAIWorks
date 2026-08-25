@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Check, ChevronRight } from "lucide-react";
 import { campaignConfig } from "@/lib/config";
 import { createPageMetadata } from "@/lib/metadata";
-import { FunnelBrand } from "@/components/funnel-brand";
+import { FunnelHeader } from "@/components/funnel-header";
 
 export const metadata = createPageMetadata({ title: "AI QA Readiness Assessment", description: "Take the free AI QA Readiness Assessment to measure your QA foundations, automation, AI-assisted testing and agentic workflow capability.", path: "/ai-qa-readiness" });
 
@@ -17,22 +17,7 @@ const capabilities = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f9f8] text-[#082d25]">
-      <header className="border-b border-white/15 bg-[#041c17] text-white">
-        <div className="mx-auto flex max-w-7xl items-center px-6 py-3.5 lg:px-8">
-          <FunnelBrand />
-          <div className="ml-auto flex items-center gap-4 lg:gap-8">
-            <nav className="hidden items-center gap-7 text-[13px] font-medium text-white/75 md:flex">
-              <a href="#readiness">Readiness</a>
-              <a href="#why-now">Why now</a>
-              <Link href="/ai-qa-lab">AI QA Lab</Link>
-              <Link href="/accelerator">Program</Link>
-            </nav>
-            <Link href="/assessment" className="bg-[#016b54] px-4 py-3 text-xs font-semibold !text-white sm:px-5 sm:text-sm">
-              Check Readiness <span className="ml-3">↗</span>
-            </Link>
-          </div>
-        </div>
-      </header>
+      <FunnelHeader />
 
       <section className="bg-[#041c17] text-white">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 lg:grid-cols-[1.02fr_.98fr] lg:items-center lg:px-8 lg:py-14">

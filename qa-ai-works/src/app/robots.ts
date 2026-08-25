@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://qaaiworks.com/sitemap.xml",
-    host: "https://qaaiworks.com",
+    sitemap: "https://www.qaaiworks.com/sitemap.xml",
+    host: "https://www.qaaiworks.com",
   };
 }

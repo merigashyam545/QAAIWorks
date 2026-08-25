@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, Check, ChevronRight } from "lucide-react";
 import { LabRegisterButton } from "@/components/lab-register-button";
 import { createPageMetadata } from "@/lib/metadata";
-import { FunnelBrand } from "@/components/funnel-brand";
+import { FunnelHeader } from "@/components/funnel-header";
 
 export const metadata = createPageMetadata({ title: "AI QA Lab", description: "Join a practical QA AI Works session demonstrating an AI-assisted Quality Engineering workflow from requirement analysis to release-quality insight.", path: "/ai-qa-lab" });
 
@@ -20,15 +20,7 @@ const steps = [
 export default function LabPage() {
   return (
     <main className="min-h-screen bg-[#f8f9f8] text-[#082d25]">
-      <header className="border-b border-white/15 bg-[#041c17] text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-          <FunnelBrand />
-          <div className="flex items-center gap-7 text-sm">
-            <Link href="/assessment" className="hidden text-white/75 hover:text-white md:inline">Readiness Assessment</Link>
-            <Link href="/accelerator" className="border border-white/70 px-5 py-3 font-semibold">Explore Program <span className="ml-3">↗</span></Link>
-          </div>
-        </div>
-      </header>
+      <FunnelHeader ctaLabel="Explore Accelerator" ctaHref="/accelerator" />
 
       <section className="bg-[#041c17] text-white">
         <div className="mx-auto grid max-w-7xl gap-14 px-6 py-20 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:py-28">

@@ -3,7 +3,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { campaignConfig } from "@/lib/config";
 import { CohortApplyButton } from "@/components/cohort-apply-button";
 import { createPageMetadata } from "@/lib/metadata";
-import { FunnelBrand } from "@/components/funnel-brand";
+import { FunnelHeader } from "@/components/funnel-header";
 
 export const metadata = createPageMetadata({ title: "AI-Enabled Quality Engineer Accelerator", description: "Explore the QA AI Works accelerator for professionals building practical AI-assisted testing, automation, debugging and quality-intelligence workflows.", path: "/accelerator" });
 
@@ -26,17 +26,7 @@ const outputs = [
 export default function AcceleratorPage() {
   return (
     <main className="min-h-screen bg-[#f8f9f8] text-[#082d25]">
-      <header className="border-b border-white/15 bg-[#041c17] text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-          <FunnelBrand />
-          <nav className="hidden items-center gap-7 text-sm text-white/75 md:flex">
-            <a href="#outcomes">Outcomes</a>
-            <a href="#curriculum">Curriculum</a>
-            <a href="#pricing">Pricing</a>
-          </nav>
-          <Link href="/assessment" className="border border-white/70 px-5 py-3 text-sm font-semibold">Check Readiness <span className="ml-3">↗</span></Link>
-        </div>
-      </header>
+      <FunnelHeader />
 
       <section className="bg-[#041c17] text-white">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28">
@@ -55,7 +45,7 @@ export default function AcceleratorPage() {
             </div>
           </div>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="/assessment" className="bg-white px-7 py-4 text-sm font-semibold text-[#082d25]">Check your readiness <span className="ml-4">↗</span></Link>
+            <Link href="/assessment" className="bg-[#018c70] px-7 py-4 text-sm font-semibold !text-white">Check your readiness <span className="ml-4">↗</span></Link>
             <Link href="/ai-qa-lab" className="px-3 py-4 text-sm font-semibold text-white">Join the AI QA Lab <ArrowRight className="ml-2 inline" size={16}/></Link>
           </div>
         </div>

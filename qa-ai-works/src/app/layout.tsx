@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://qaaiworks.com"),
+  metadataBase: new URL("https://www.qaaiworks.com"),
   title: { default: "QA AI Works | Quality Engineering for the AI Era", template: "%s | QA AI Works" },
   description: "QA AI Works helps engineering leaders transform Quality Engineering through modern automation, AI adoption, operating-model redesign and quality intelligence.",
   keywords: ["Quality Engineering", "AI transformation", "test automation", "QE consulting"],
@@ -29,29 +29,29 @@ const organizationSchema = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://qaaiworks.com/#organization",
+      "@id": "https://www.qaaiworks.com/#organization",
       name: "QA AI Works",
-      url: "https://qaaiworks.com/",
-      logo: "https://qaaiworks.com/qa-ai-works-logo-clear.png",
+      url: "https://www.qaaiworks.com/",
+      logo: "https://www.qaaiworks.com/qa-ai-works-logo-clear.png",
       email: "hello@qaaiworks.com",
       telephone: "+91-99805-46951",
       sameAs: ["https://www.linkedin.com/company/qa-ai-works/"],
     },
     {
       "@type": "WebSite",
-      "@id": "https://qaaiworks.com/#website",
-      url: "https://qaaiworks.com/",
+      "@id": "https://www.qaaiworks.com/#website",
+      url: "https://www.qaaiworks.com/",
       name: "QA AI Works",
-      publisher: { "@id": "https://qaaiworks.com/#organization" },
+      publisher: { "@id": "https://www.qaaiworks.com/#organization" },
       inLanguage: "en-IN",
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://qaaiworks.com/#service",
+      "@id": "https://www.qaaiworks.com/#service",
       name: "QA AI Works",
-      url: "https://qaaiworks.com/",
+      url: "https://www.qaaiworks.com/",
       description: "Quality Engineering and AI transformation consultancy helping organizations modernize strategy, automation, operating models and AI adoption.",
-      provider: { "@id": "https://qaaiworks.com/#organization" },
+      provider: { "@id": "https://www.qaaiworks.com/#organization" },
       areaServed: "Worldwide",
       serviceType: ["Quality Engineering Assessment", "Enterprise QE Transformation", "Test Automation Modernization", "AI Adoption in Quality Engineering", "Release Quality and Risk Intelligence"],
     },

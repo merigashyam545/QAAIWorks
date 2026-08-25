@@ -6,7 +6,7 @@ const routes = ["", "/about", "/services", "/ai-quality-engineering", "/how-we-w
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route, index) => ({
-    url: `https://qaaiworks.com${route}/`,
+    url: `https://www.qaaiworks.com${route}/`,
     lastModified: new Date("2026-08-25"),
     changeFrequency: index === 0 ? "weekly" : "monthly",
     priority: index === 0 ? 1 : route === "/services" || route === "/ai-quality-engineering" ? 0.8 : 0.7,

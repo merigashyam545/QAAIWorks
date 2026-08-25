@@ -9,7 +9,7 @@ export function FunnelBrand({ tone = "dark" }: { tone?: "dark" | "light" }) {
         alt="QA AI Works"
         width={tone === "light" ? 2068 : 2108}
         height={tone === "light" ? 760 : 746}
-        className={`h-auto w-[158px] md:w-[184px] ${tone === "dark" ? "brightness-0 invert" : ""}`}
+        className="h-auto w-[138px] sm:w-[158px] md:w-[184px]"
         priority
       />
     </Link>
