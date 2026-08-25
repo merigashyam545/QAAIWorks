@@ -1,0 +1,3 @@
+import { NextRequest, NextResponse } from "next/server";
+import { callSupabaseRpc } from "@/lib/supabase-rest";
+export async function POST(request: NextRequest) { try { const body = (await request.json()) as { resultToken?: string }; if (!body.resultToken || !/^[0-9a-f-]{36}$/i.test(body.resultToken)) return NextResponse.json({ error: "assessment_required" }, { status: 400 }); await callSupabaseRpc<boolean>("apply_to_cohort", { p_result_token: body.resultToken, p_cohort_slug: "founding-cohort-01" }); return NextResponse.json({ ok: true }); } catch (error) { console.error("Cohort application failed", error); return NextResponse.json({ error: "application_failed" }, { status: 500 }); } }

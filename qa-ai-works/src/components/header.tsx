@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const navigation = [["About", "/about"], ["Services", "/services"], ["AI & Quality Engineering", "/ai-quality-engineering"], ["How We Work", "/how-we-work"], ["Insights", "/insights"]] as const;
+const navigation = [["About", "/about"], ["Services", "/services"], ["AI & Quality Engineering", "/ai-quality-engineering"], ["Self-Assessment", "/ai-qa-readiness"], ["Insights", "/insights"]] as const;
 
 export function Header() {
   return <header className="site-header"><div className="shell header-inner">
