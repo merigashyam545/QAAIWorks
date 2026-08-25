@@ -17,11 +17,11 @@ const capabilities = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f9f8] text-[#082d25]">
-      <header className="border-b border-[#d8e0dc] bg-white text-[#082d25]">
+      <header className="border-b border-white/15 bg-[#041c17] text-white">
         <div className="mx-auto flex max-w-7xl items-center px-6 py-3.5 lg:px-8">
-          <FunnelBrand tone="light" />
+          <FunnelBrand />
           <div className="ml-auto flex items-center gap-4 lg:gap-8">
-            <nav className="hidden items-center gap-7 text-[13px] font-medium text-[#40534c] md:flex">
+            <nav className="hidden items-center gap-7 text-[13px] font-medium text-white/75 md:flex">
               <a href="#readiness">Readiness</a>
               <a href="#why-now">Why now</a>
               <Link href="/ai-qa-lab">AI QA Lab</Link>
