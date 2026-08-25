@@ -27,7 +27,7 @@ export default function Home() {
               <Link href="/ai-qa-lab">AI QA Lab</Link>
               <Link href="/accelerator">Program</Link>
             </nav>
-            <Link href="/assessment" className="bg-[#016b54] px-4 py-3 text-xs font-semibold text-white sm:px-5 sm:text-sm">
+            <Link href="/assessment" className="bg-[#016b54] px-4 py-3 text-xs font-semibold !text-white sm:px-5 sm:text-sm">
               Check Readiness <span className="ml-3">↗</span>
             </Link>
           </div>
