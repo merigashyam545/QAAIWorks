@@ -17,28 +17,30 @@ const capabilities = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f9f8] text-[#082d25]">
-      <header className="border-b border-white/15 bg-[#041c17] text-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-          <FunnelBrand />
-          <nav className="hidden items-center gap-8 text-[13px] text-white/75 md:flex">
-            <a href="#readiness">Readiness</a>
-            <a href="#why-now">Why now</a>
-            <Link href="/ai-qa-lab">AI QA Lab</Link>
-            <Link href="/accelerator">Program</Link>
-          </nav>
-          <Link href="/assessment" className="border border-white/75 px-5 py-3 text-sm font-semibold">
-            Check Readiness <span className="ml-3">↗</span>
-          </Link>
+      <header className="border-b border-[#d8e0dc] bg-white text-[#082d25]">
+        <div className="mx-auto flex max-w-7xl items-center px-6 py-3.5 lg:px-8">
+          <FunnelBrand tone="light" />
+          <div className="ml-auto flex items-center gap-4 lg:gap-8">
+            <nav className="hidden items-center gap-7 text-[13px] font-medium text-[#40534c] md:flex">
+              <a href="#readiness">Readiness</a>
+              <a href="#why-now">Why now</a>
+              <Link href="/ai-qa-lab">AI QA Lab</Link>
+              <Link href="/accelerator">Program</Link>
+            </nav>
+            <Link href="/assessment" className="bg-[#016b54] px-4 py-3 text-xs font-semibold text-white sm:px-5 sm:text-sm">
+              Check Readiness <span className="ml-3">↗</span>
+            </Link>
+          </div>
         </div>
       </header>
 
       <section className="bg-[#041c17] text-white">
-        <div className="mx-auto grid min-h-[680px] max-w-7xl gap-12 px-6 py-16 lg:grid-cols-[1.02fr_.98fr] lg:items-center lg:px-8 lg:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-12 lg:grid-cols-[1.02fr_.98fr] lg:items-center lg:px-8 lg:py-14">
           <div>
             <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-[#b9e3d4]">
               <span className="h-px w-6 bg-[#b9e3d4]" /> AI QA Readiness
             </div>
-            <h1 className="mt-7 max-w-4xl text-5xl font-normal leading-[.98] tracking-[-0.06em] md:text-7xl lg:text-[82px]">
+            <h1 className="mt-6 max-w-4xl text-5xl font-normal leading-[.98] tracking-[-0.06em] md:text-7xl lg:text-[76px]">
               The QA role is changing.
               <span className="block text-[#b9e3d4]">Are you ready?</span>
             </h1>
@@ -46,15 +48,15 @@ export default function Home() {
               AI is changing how requirements are analysed, tests are designed, automation is built, failures are investigated and quality decisions are made.
             </p>
             <p className="mt-2 text-base text-white/58">Find out how prepared your current QA workflow is.</p>
-            <div className="mt-9 flex flex-wrap gap-4">
-              <Link href="/assessment" className="bg-white px-7 py-4 text-sm font-semibold text-[#082d25]">
+            <div className="mt-7 flex flex-wrap gap-4">
+              <Link href="/assessment" className="bg-[#018c70] px-7 py-4 text-sm font-semibold text-white">
                 Check my AI QA readiness <span className="ml-4">↗</span>
               </Link>
               <Link href="/accelerator" className="px-3 py-4 text-sm font-semibold text-white">
                 Explore the program <ArrowRight className="ml-2 inline" size={16} />
               </Link>
             </div>
-            <div className="mt-10 border-t border-white/18 pt-5 text-[11px] text-white/55">
+            <div className="mt-7 border-t border-white/18 pt-4 text-[11px] text-white/55">
               3 minutes&nbsp;&nbsp;·&nbsp;&nbsp;Personalized score&nbsp;&nbsp;·&nbsp;&nbsp;Free
             </div>
           </div>
@@ -65,7 +67,7 @@ export default function Home() {
             </div>
             <div className="divide-y divide-white/12">
               {evolution.map((item, index) => (
-                <div key={item} className={`grid min-h-[102px] grid-cols-[48px_1fr_auto] items-center gap-4 px-6 ${index === evolution.length - 1 ? "bg-[#016b54]" : ""}`}>
+                <div key={item} className={`grid min-h-[88px] grid-cols-[48px_1fr_auto] items-center gap-4 px-6 ${index === evolution.length - 1 ? "bg-[#016b54]" : ""}`}>
                   <span className="text-xs text-[#b9e3d4]">0{index + 1}</span>
                   <div>
                     <div className="text-lg font-medium tracking-[-0.025em]">{item}</div>
@@ -84,7 +86,7 @@ export default function Home() {
       </section>
 
       <section id="why-now" className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-16">
           <div className="grid gap-12 lg:grid-cols-[.95fr_1.05fr] lg:items-start">
             <div>
               <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#016b54]"><span className="h-px w-6 bg-[#016b54]" /> The shift</div>
@@ -101,9 +103,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-14 grid border-y border-[#d8e0dc] md:grid-cols-4">
+          <div className="mt-10 grid border-y border-[#d8e0dc] md:grid-cols-4">
             {capabilities.map(([number, title, description]) => (
-              <div key={number} className="min-h-[230px] border-b border-[#d8e0dc] p-6 md:border-b-0 md:border-r">
+              <div key={number} className="min-h-[205px] border-b border-[#d8e0dc] p-6 md:border-b-0 md:border-r">
                 <div className="text-[10px] font-semibold text-[#016b54]">{number}</div>
                 <h3 className="mt-8 text-2xl font-medium leading-[1.08] tracking-[-0.04em]">{title}</h3>
                 <p className="mt-5 text-sm leading-6 text-[#657169]">{description}</p>
@@ -114,7 +116,7 @@ export default function Home() {
       </section>
 
       <section id="readiness" className="bg-[#eef3ef]">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:px-8 lg:py-16">
           <div>
             <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#016b54]"><span className="h-px w-6 bg-[#016b54]" /> AI QA Readiness</div>
             <h2 className="mt-6 max-w-xl text-4xl font-semibold leading-[1.03] tracking-[-0.05em] md:text-6xl">Know where your workflow stands.</h2>
@@ -154,7 +156,7 @@ export default function Home() {
       </section>
 
       <section id="program" className="bg-[#041c17] text-white">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8 lg:py-16">
           <div className="grid gap-12 lg:grid-cols-[1fr_.85fr] lg:items-end">
             <div>
               <div className="flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-[#b9e3d4]"><span className="h-px w-6 bg-[#b9e3d4]" /> After the diagnostic</div>
